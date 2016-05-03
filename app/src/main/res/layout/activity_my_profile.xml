@@ -1,0 +1,751 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TBMyProfileActivity"
+    android:background="@drawable/background_hollow"
+    >
+
+
+    <auroratech.traber.common.ui.TBHeader
+        android:id="@+id/profileHeaderSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:disableBackButton="false"
+        custom:pageTitle="My Profile"
+        android:layout_alignParentTop="true">
+    </auroratech.traber.common.ui.TBHeader>
+
+
+    <!-- Main Profile -->
+    <RelativeLayout
+        android:id="@+id/myProfileSettingContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_above="@+id/profileFooterSection"
+
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        >
+                        <TextView
+                            android:id="@+id/profile_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Mike Peter"
+                            android:textStyle="italic"
+                            android:textSize="20sp"
+                            android:textColor="@color/tb_profile_name"
+                            />
+                        <ImageView
+                            android:layout_toLeftOf="@+id/profile_user_name"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/profile_image"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/my_profile_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LOG OUT"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tb_profile_logout"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/profile_logout_link"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        />
+
+                    </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/profile_email_section"
+                    style="@style/ProfileSettingPageItems">
+                        <TextView
+                            style="@style/ProfileSettingPageItemsLabel"
+                            android:text="Email" />
+
+                        <TextView
+                            android:id="@+id/profile_email"
+                            style="@style/TBAlignParentRight"
+                            android:text="test@email.com" />
+
+                    </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_phone_section"
+                    style="@style/ProfileSettingPageItems">
+                        <TextView
+                            style="@style/ProfileSettingPageItemsLabel"
+                            android:text="Phone"
+                            />
+
+                        <TextView
+                            android:id="@+id/profile_phone"
+                            style="@style/TBAlignParentRight"
+                            android:text="999-999-9999" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_driver_license_section"
+                    style="@style/ProfileSettingPageItems.ButtonClickable">
+                        <TextView
+                            style="@style/ProfileSettingPageItemsLabel"
+                            android:text="Driver License"
+                            />
+                        <ImageView
+                            android:id="@+id/profile_driver_license_button"
+                            style="@style/TBAlignParentRight.ClickableItems"
+                            />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_privacy_and_term_section"
+                    style="@style/ProfileSettingPageItems.ButtonClickable">
+                        <TextView
+                            style="@style/ProfileSettingPageItemsLabel"
+                            android:text="@string/privacy_and_term"
+                            />
+
+                        <ImageView
+                            android:id="@+id/profile_privacy_term_button"
+                            style="@style/TBAlignParentRight.ClickableItems"
+                            />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_help_section"
+                    style="@style/ProfileSettingPageItems.ButtonClickable">
+                        <TextView
+                            style="@style/ProfileSettingPageItemsLabel"
+                            android:text="Help"
+                            />
+
+                        <ImageView
+                            android:id="@+id/profile_help_button"
+                            style="@style/TBAlignParentRight.ClickableItems"
+                            />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_setting_section"
+                    style="@style/ProfileSettingPageItems.ButtonClickable">
+                    <TextView
+                        style="@style/ProfileSettingPageItemsLabel"
+                        android:text="Setting"
+                        />
+
+                    <ImageView
+                        android:id="@+id/profile_setting_button"
+                        style="@style/TBAlignParentRight.ClickableItems"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_language_section"
+                    style="@style/ProfileSettingPageItems">
+                        <TextView
+                            style="@style/ProfileSettingPageItemsLabel"
+                            android:text="Language"
+                            />
+
+                        <ToggleButton
+                            android:id="@+id/profile_language_toggle"
+                            style="@style/TBAlignParentRight"
+                            android:layout_width="80dp"
+                            android:layout_height="25dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/language_toggle"
+                            android:textOn=""
+                            android:textOff=""
+                            android:checked="false" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_my_message_section"
+                    style="@style/ProfileSettingPageItems.ButtonClickable">
+                    <TextView
+                        style="@style/ProfileSettingPageItemsLabel"
+                        android:text="My Message"
+                        />
+
+                    <ImageView
+                        android:id="@+id/profile_my_message_button"
+                        style="@style/TBAlignParentRight.ClickableItems"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_share_this_app"
+                    style="@style/ProfileSettingPageItems">
+                    <TextView
+                        style="@style/ProfileSettingPageItemsLabel"
+                        android:text="Share this app for 10% off"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <!-- Help Section -->
+    <RelativeLayout
+        android:id="@+id/myProfileHelpSectionContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_above="@+id/profileFooterSection"
+        android:visibility="gone"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Help"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/profile_help_about_us_link"
+                    style="@style/ProfileSettingPageItems">
+                    <TextView
+                        style="@style/ProfileSettingPageItemsLabel"
+                        android:text="About Us"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_help_call_us_link"
+                    style="@style/ProfileSettingPageItems">
+                    <TextView
+                        style="@style/ProfileSettingPageItemsLabel"
+                        android:text="Call Us"
+                        />
+
+                    <TextView
+                        style="@style/TBAlignParentRight"
+                        android:text="###-###-####"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_help_faq_link"
+                    style="@style/ProfileSettingPageItems">
+                    <TextView
+                        style="@style/ProfileSettingPageItemsLabel"
+                        android:text="FAQs"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <!-- Setting Section -->
+    <RelativeLayout
+        android:id="@+id/myProfileSettingSectionContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_above="@+id/profileFooterSection"
+        android:visibility="gone"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Setting"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/profile_push_notification_section"
+                    style="@style/ProfileSettingPageItems">
+                    <TextView
+                        style="@style/ProfileSettingPageItemsLabel"
+                        android:text="Push Notifications"
+                        />
+
+                    <ToggleButton
+                        android:id="@+id/profile_push_notification_toggle"
+                        style="@style/TBAlignParentRight"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/toggle_selector"
+                        android:textOn=""
+                        android:textOff=""
+                        android:checked="false" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/profile_case_update_notification_section"
+                    style="@style/ProfileSettingPageItems">
+                    <TextView
+                        style="@style/ProfileSettingPageItemsLabel"
+                        android:text="Case update notification"
+                        />
+
+                    <ToggleButton
+                        android:id="@+id/profile_case_update_notification_toggle"
+                        style="@style/TBAlignParentRight"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/toggle_selector"
+                        android:textOn=""
+                        android:textOff=""
+                        android:checked="false" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <!-- Profile Change Content -->
+    <RelativeLayout
+        android:id="@+id/myProfileChangeContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_above="@+id/profileFooterSection"
+        android:visibility="gone"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/my_driver_license_picture_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:minHeight="75dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/crossBox"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/cross_box"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/my_driver_license_picture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/my_driver_license_picture_press_to_take_picture"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text=""
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1">
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+                        <TextView
+                            android:id="@+id/driver_licence_name_text"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right"
+                            android:layout_column="0"
+                            />
+                        <EditText
+                            android:id="@+id/driver_license_name"
+                            style="@style/TBProfileDriverLicenseLongBoxes"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+                        <TextView
+                            android:id="@+id/driver_licence_name_address"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Address:"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right"
+                            android:layout_column="0"
+                            />
+                        <EditText
+                            android:id="@+id/driver_license_address_text"
+                            style="@style/TBProfileDriverLicenseLongBoxes"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+                        <TextView
+                            android:id="@+id/driver_licence_phone_number_text"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Number:"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right"
+                            android:layout_column="0"
+                        />
+                        <EditText
+                            android:id="@+id/driver_licence_phone_number"
+                            style="@style/TBProfileDriverLicenseLongBoxes"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                        />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    >
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp">
+                                <TableLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_weight="1"
+                                    >
+                                    <TableRow
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp">
+                                        <TextView
+                                            android:id="@+id/driver_license_iss_text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="ISS:"
+                                            android:layout_column="0"
+                                            />
+                                        <EditText
+                                            android:id="@+id/driver_license_iss"
+                                            style="@style/TBProfileDriverLicenseSmallBoxes"
+                                            android:layout_column="1"
+                                            android:layout_weight="1"
+                                            />
+                                        <ImageButton
+                                            android:id="@+id/driver_license_iss_button"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_column="2"
+                                            android:background="@drawable/calendar"
+                                            />
+                                    </TableRow>
+                                    <TableRow
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        >
+                                        <TextView
+                                            android:id="@+id/driver_license_dob_text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="DOB:"
+                                            android:layout_column="0"
+                                            />
+                                        <EditText
+                                            android:id="@+id/driver_license_dob"
+                                            style="@style/TBProfileDriverLicenseSmallBoxes"
+                                            android:layout_column="1"
+                                            android:layout_weight="1"
+                                            />
+                                        <ImageButton
+                                            android:id="@+id/driver_license_dob_button"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_column="2"
+                                            android:background="@drawable/calendar"
+                                            />
+                                        </TableRow>
+                                </TableLayout>
+                                <TableLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_weight="1"
+                                    >
+                                    <TableRow
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp">
+                                        <TextView
+                                            android:id="@+id/driver_license_expiry_text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="EXP:"
+                                            android:layout_column="0"
+                                            />
+                                        <EditText
+                                            android:id="@+id/driver_license_expiry"
+                                            style="@style/TBProfileDriverLicenseSmallBoxes"
+                                            android:layout_column="1"
+                                            android:layout_weight="1"
+                                            />
+                                        <ImageButton
+                                            android:id="@+id/driver_license_expiry_button"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_column="2"
+                                            android:background="@drawable/calendar"
+                                            />
+                                    </TableRow>
+                                    <TableRow
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp">
+                                        <TextView
+                                            android:id="@+id/driver_license_height_text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="HGT:"
+                                            android:layout_column="0"
+                                            />
+                                        <EditText
+                                            android:id="@+id/driver_license_height"
+                                            style="@style/TBProfileDriverLicenseSmallBoxes"
+                                            android:layout_column="1"
+                                            android:layout_weight="1"
+                                            />
+                                        <TextView
+                                            android:id="@+id/driver_license_height_label"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="cm"
+                                            android:layout_column="2"
+                                            />
+                                    </TableRow>
+                                </TableLayout>
+                            </TableRow>
+                    </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    >
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            >
+
+                            <TextView
+                                android:id="@+id/driver_license_sex_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SEX:"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                />
+                            <RadioGroup
+                                android:id="@+id/driver_license_sex_option"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_toRightOf="@+id/driver_license_sex_text"
+                                android:checkedButton="@+id/driver_license_male" >
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Male"
+                                    android:id="@+id/driver_license_male"
+                                    android:textSize="15dp"
+                                    />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Female"
+                                    android:id="@+id/driver_license_female"
+                                    android:textSize="15dp"
+                                    />
+
+                            </RadioGroup>
+                        </RelativeLayout>
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            >
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="CLASS:"
+                                    android:layout_column="0"
+                                    />
+                                <Spinner
+                                    android:id="@+id/driver_license_class"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    />
+                                </TableRow>
+                            <TableRow
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="REST:"
+                                        android:layout_column="0"
+                                        />
+                                    <EditText
+                                        android:id="@+id/driver_license_rest"
+                                        style="@style/TBProfileDriverLicenseSmallBoxes"
+                                        android:background="@drawable/edit_text_white_background"
+                                        android:layout_column="1"
+                                        android:layout_weight="1"
+                                        />
+                                </TableRow>
+                            </TableLayout>
+                        </TableRow>
+
+                    </TableLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    >
+
+                    <Button
+                        android:id="@+id/driver_license_save_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:background="@drawable/ticket_comment_section_submit_button_background"
+                        />
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <auroratech.traber.common.ui.TBFooter
+        android:id="@+id/profileFooterSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:disableClickableOption="third"
+        android:layout_alignParentBottom="true">
+    </auroratech.traber.common.ui.TBFooter>
+
+</RelativeLayout>

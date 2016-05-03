@@ -1,0 +1,105 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    tools:context=".TBPhotoActivity"
+    android:background="@drawable/background_hollow"
+    >
+
+
+    <auroratech.traber.common.ui.TBHeader
+        android:id="@+id/profileHeaderSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:disableBackButton="false"
+        custom:pageTitle="Take Photo"
+        android:layout_alignParentTop="true">
+    </auroratech.traber.common.ui.TBHeader>
+
+    <RelativeLayout
+        android:id="@+id/myTicketViewItemsContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:id="@+id/imgPreviewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preview"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <!-- To display picture taken -->
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgPreviewText"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:visibility="gone" />
+
+        <!-- Capture picture button -->
+        <Button
+            android:id="@+id/btnCapturePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take a Picture"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/ticket_comment_section_submit_button_background"
+            android:textColor="@color/white"
+            />
+
+        <LinearLayout
+            android:id="@+id/reTakeToolBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:visibility="gone"
+            >
+            <Button
+                android:id="@+id/btnReCapturePictureBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Re-Take Picture"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/ticket_comment_section_submit_button_background"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"
+                />
+
+            <Button
+                android:id="@+id/btnCapturePictureOkBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Picture"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/ticket_comment_section_submit_button_background"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                />
+
+            </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

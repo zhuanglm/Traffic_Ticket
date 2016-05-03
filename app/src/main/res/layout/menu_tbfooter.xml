@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border_gray">
+
+        <ImageButton
+            android:id="@+id/footer_ticket"
+            android:layout_width="@dimen/tb_footer_button_size"
+            android:layout_height="@dimen/tb_footer_button_size"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border_gray">
+
+        <ImageButton
+            android:id="@+id/footer_car"
+            android:layout_width="@dimen/tb_footer_button_size"
+            android:layout_height="@dimen/tb_footer_button_size"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border_gray">
+
+        <ImageButton
+            android:id="@+id/footer_profile"
+            android:layout_width="@dimen/tb_footer_button_size"
+            android:layout_height="@dimen/tb_footer_button_size"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+
+            />
+
+    </RelativeLayout>
+
+</merge>

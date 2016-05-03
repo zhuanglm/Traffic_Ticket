@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="sign_up_button_color">#0088B7</color>
+    <color name="page_comment_section_bg_color">#D3D3D3</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="light_blue">#ADD8E6</color>
+    <color name="blue">#0000FF</color>
+    <color name="button_blue">#696bea</color>
+    <color name="page_comment_section_submit_button_bg_color">#4e4e4e</color>
+    <color name="tb_transparent">#80FFFFFF</color>
+    <color name="tb_transparent_75">#BFFFFFFF</color>
+    <color name="tb_transparent_60">#99FFFFFF</color>
+    <color name="tb_transparent_30">#4DFFFFFF</color>
+    <color name="tb_header_blue">#149DCA</color>
+    <color name="tb_payment_option_header">#2e2e2e</color>
+    <color name="tb_payment_option_submit">#e0e0e0</color>
+    <color name="tb_dark_red" >#FFCC0000</color>
+    <color name="tb_hollow_gray">#99D3D3D3</color>
+
+    <!--login page-->
+    <color name="tb_login_field">#E4E4E2</color>
+    <color name="tb_login_button_background">#53B5D0</color>
+    <color name="tb_login_sign_in_text">#AAAAAC</color>
+
+
+    <!--profile page-->
+    <color name="tb_profile_name">#120f0f</color>
+    <color name="tb_profile_item">#99EEEEEE</color>
+    <color name="tb_profile_logout">#00A4CA</color>
+
+
+
+    <color name="text_link">#1da4dc</color>
+    <color name="text_gray">#999999</color>
+    <color name="text_color">#000000</color>
+    <color name="text_link_color">#0000ff</color>
+    <color name="bottom_bar_bg_color">#040c7b</color>
+    <color name="topbar_bg">#72A0CA</color>
+    <color name="white">#ffffff</color>
+    <color name="bg_gray">#ededed</color>
+
+    <color name="red" type="color">#FFFF4444</color>
+
+    <!--<color name="dynamic_font_color">%1$s</color>-->
+    <!--<color name="dynamic_button_color">%1$s</color>-->
+    <!--<color name="dynamic_background_color">%1$s</color>-->
+
+</resources>

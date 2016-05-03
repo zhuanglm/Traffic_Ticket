@@ -1,0 +1,336 @@
+<!--
+  Copyright 2013 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style>
+
+
+
+
+    <style name="SignUpPage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SignUpPage.EditBox">
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:gravity">left</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+
+    </style>
+
+    <style name="SignUpPage.ImageIcon">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+    </style>
+
+
+
+
+
+
+    <style name="SignInPage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SignInPage.EditBox">
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:gravity">left</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+
+    </style>
+
+    <style name="SignInPage.ImageIcon">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+
+
+
+
+
+
+
+    <!--Styling-->
+    <style name="ProfileSettingPageItems">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:background">@drawable/profile_item</item>
+    </style>
+
+    <style name="ProfileSettingPageItems.ButtonClickable">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="ProfileSettingPageItemsLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="TBWrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+        <style name="TBTextBoxStyle" parent="TBWrapContent">
+            <item name="android:background">@drawable/edit_text_white_background</item>
+        </style>
+
+        <style name="TBAlignParentRight" parent="TBWrapContent">
+            <item name="android:layout_alignParentRight">true</item>
+            <item name="android:layout_marginRight">20dp</item>
+            <item name="android:layout_centerVertical">true</item>
+        </style>
+
+            <style name="TBAlignParentRight.ClickableItems" parent="TBAlignParentRight">
+                <item name="android:layout_width">20dp</item>
+                <item name="android:layout_height">20dp</item>
+                <item name="android:src">@drawable/point_right_arrow</item>
+            </style>
+
+
+    <style name="TBMatchContentWidth">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="TBPaymentPageItemLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:background">@drawable/border_white_with_corner</item>
+    </style>
+
+    <style name="TBPaymentPageTextHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/tb_payment_option_header</item>
+    </style>
+
+    <style name="TBPaymentPageTextContentHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tb_payment_option_header</item>
+    </style>
+
+    <style name="TBPaymentPageTextContentDescription">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TBPaymentPageTextContentPrivacyAgreement">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TBPaymentPageTextContentButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/title_payment_option_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:background">@drawable/ticket_comment_section_submit_button_background</item>
+    </style>
+
+
+
+    <!--Common-->
+    <style name="TBMyStickerAddTableRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="TBPersonIconTop">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">140dp</item>
+        <item name="android:src">@drawable/profile_image</item>
+    </style>
+
+    <style name="TBPersonNameTop">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TBAddTextBottom">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+    <!--My Car Add-->
+    <style name="TBMyCarAddSectionHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+
+
+    <!--My Sticker Add-->
+    <style name="TBMyStickerAddSection">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/ticket_comment_section_background</item>
+    </style>
+
+    <style name="TBMyStickerAddSectionHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TBMyStickerAddMandatoryFieldStar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">*</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+
+
+
+
+    <!--Profile Section-->
+
+    <style name="TBProfileDriverLicenseLongBoxes">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_text_white_background</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginRight">40dp</item>
+    </style>
+
+    <style name="TBProfileDriverLicenseSmallBoxes">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_text_white_background</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!--Section for Custom Item/Controls-->
+    <declare-styleable name="TBChatItem">
+        <attr name="isLeftMessage" format="boolean" />
+        <attr name="isRightMessage" format="boolean" />
+        <attr name="leftMessage" format="string" />
+        <attr name="rightMessage" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TBHeader">
+        <attr name="disableBackButton" format="boolean" />
+        <attr name="pageTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TBFooter">
+        <attr name="disableClickableOption" format="enum">
+            <enum name="first" value="1"/>
+            <enum name="second" value="2"/>
+            <enum name="third" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TBCarItem">
+        <attr name="isAddCarButton" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TBTicketItem">
+        <attr name="isAddTicketButton" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TBChatTriangleShape">
+        <attr name="isLeftArrow" format="boolean" />
+        <attr name="isRightArrow" format="boolean" />
+    </declare-styleable>
+
+</resources>

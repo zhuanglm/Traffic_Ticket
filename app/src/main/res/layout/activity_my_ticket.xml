@@ -1,0 +1,374 @@
+<!--
+
+    This page is already Obsolete (just here for example purpose)
+
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="auroratech.traber.TBMyTicketActivity"
+    android:background="@drawable/background_hollow"
+    >
+
+    <auroratech.traber.common.ui.TBHeader
+        android:id="@+id/profileHeaderSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:disableBackButton="false"
+        custom:pageTitle="My Ticket"
+        android:layout_alignParentTop="true">
+    </auroratech.traber.common.ui.TBHeader>
+
+    <!--no ticket-->
+    <RelativeLayout
+        android:id="@+id/myTicketNoTicket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_above="@+id/profileFooterSection"
+        android:visibility="gone"
+        >
+
+    </RelativeLayout>
+
+    <!--list of ticket-->
+    <RelativeLayout
+        android:id="@+id/myTicketViewItemsContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_above="@+id/profileFooterSection"
+        >
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/my_ticket_add_btn"
+                >
+
+                <LinearLayout
+                    android:id="@+id/my_ticket_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:src="@drawable/profile_image"/>
+                            <TextView
+                                android:id="@+id/profile_user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mike Peter"
+                                android:textStyle="italic"
+                                android:textColor="@color/white"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </ScrollView>
+
+            <auroratech.traber.common.ui.TBTicketItem
+                android:id="@+id/my_ticket_add_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:isAddTicketButton="true"
+                android:layout_alignParentBottom="true"
+                >
+            </auroratech.traber.common.ui.TBTicketItem>
+
+        </RelativeLayout>
+
+    <!--add new ticket -->
+    <RelativeLayout
+        android:id="@+id/myTicketAddItemsContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_above="@+id/profileFooterSection"
+        android:visibility="gone"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    >
+                        <LinearLayout
+                            android:id="@+id/my_ticket_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/my_ticket_display"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="My Ticket"/>
+                                <TextView
+                                    android:layout_alignRight="@+id/my_ticket_display"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" - Open"/>
+                            </LinearLayout>
+
+                       <ImageView
+                           android:id="@+id/ticket_picture"
+                           android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:layout_below="@+id/my_ticket_heading"/>
+
+                        <LinearLayout
+                            android:id="@+id/city_selection_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/ticket_picture">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="City:"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="City Selection (change here)"/>
+                            </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/comment_section"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/city_selection_content"
+                            android:background="@drawable/ticket_comment_section_background">
+
+                            <TextView
+                                android:id="@+id/comment_section_comment_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentLeft="true"
+                                android:text="Comment"/>
+
+                            <EditText
+                                android:id="@+id/comment_section_comment_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="300dp"
+                                android:layout_below="@+id/comment_section_comment_text"
+                                android:inputType="textMultiLine"
+                                android:gravity="top|left"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:background="@drawable/edit_text_white_background"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/comment_section_comment_content"
+                                android:background="@drawable/ticket_comment_section_submit_button_background"
+                                android:textColor="@color/white"
+                                android:text="Submit"/>
+
+                            </RelativeLayout>
+                    </RelativeLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+    <!-- select payment option -->
+    <RelativeLayout
+        android:id="@+id/myTicketSelectPackageContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_above="@+id/profileFooterSection"
+        android:visibility="gone"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                >
+
+                <TextView
+                    android:id="@+id/payment_package_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Packages"/>
+
+                <!--payment option 1-->
+                <LinearLayout
+                    android:id="@+id/option_one_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_below="@+id/payment_package_title"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                 >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$99"
+                        android:gravity="center"/>
+                    <RelativeLayout
+                        android:id="@+id/option_one_content_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/option_one_content_description_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Do it YourSelf!"
+                                android:gravity="center"/>
+                            <TextView
+                                android:id="@+id/option_one_content_description_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="This section will be dedicated to describe for whatever this option should be used for"
+                                android:layout_below="@+id/option_one_content_description_title"/>
+                            <LinearLayout
+                                android:id="@+id/option_one_privacy_policy_section"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_below="@+id/option_one_content_description_content">
+                                    <CheckBox
+                                        android:id="@+id/option_one_privacy_policy_checkbox"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="I have read the "
+                                        />
+                                    <TextView
+                                        android:id="@+id/option_one_privacy_policy_link"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Privacy policy"
+                                        />
+                                    </LinearLayout>
+                            <Button
+                                android:id="@+id/option_one_buy_now_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Buy Now"
+                                android:gravity="center"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/option_one_privacy_policy_section"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                <!--payment option 2-->
+                <LinearLayout
+                    android:id="@+id/option_two_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_below="@+id/option_one_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$99"
+                        android:gravity="center"/>
+                    <RelativeLayout
+                        android:id="@+id/option_two_content_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/option_two_content_description_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Do it YourSelf!"
+                            android:gravity="center"/>
+                        <TextView
+                            android:id="@+id/option_two_content_description_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="This section will be dedicated to describe for whatever this option should be used for"
+                            android:layout_below="@+id/option_two_content_description_title"/>
+                        <LinearLayout
+                            android:id="@+id/option_two_privacy_policy_section"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_below="@+id/option_two_content_description_content">
+                            <CheckBox
+                                android:id="@+id/option_two_privacy_policy_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="I have read the "
+                                />
+                            <TextView
+                                android:id="@+id/option_two_privacy_policy_link"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Privacy policy"
+                                />
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/option_two_buy_now_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Now"
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/option_two_privacy_policy_section"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <auroratech.traber.common.ui.TBFooter
+        android:id="@+id/profileFooterSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:disableClickableOption="first"
+        android:layout_alignParentBottom="true">
+    </auroratech.traber.common.ui.TBFooter>
+
+</RelativeLayout>

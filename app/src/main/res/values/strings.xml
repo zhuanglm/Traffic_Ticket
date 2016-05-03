@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">Traber</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_main">Main</string>
+    <string name="title_sign_up">Sign Up</string>
+    <string name="title_forgot_password">Forgot Password</string>
+    <string name="title_login">Login</string>
+    <string name="title_ticket">Ticket</string>
+    <string name="title_sticker">Sticker</string>
+    <string name="title_profile">Profile</string>
+
+
+    <string name="title_payment_option_button">Buy Now</string>
+
+
+
+    <string name="car_item_model">Model:</string>
+    <string name="car_item_year">Year:</string>
+    <string name="car_item_sticker_exp">Sticker EXP:</string>
+    <string name="car_item_sticker_expire">Sticker Expire:</string>
+    <string name="car_item_sticker_renew">Renew</string>
+    <string name="car_item_add_new_car">Add a new car</string>
+
+
+
+    <string name="login_Forgot_Password">Forgot Password?</string>
+    <string name="login_LOG_IN">LOG IN</string>
+
+
+    <string name="privacy_and_term"><![CDATA[Privacy & Terms]]></string>
+
+
+
+
+
+
+
+
+
+    <string name="hello_world">hello~</string>
+    <string name="title_activity_tbphoto">TBPhotoActivity</string>
+
+    <!-- system default locale -->
+    <string name="locale_language_code">fr</string> <!-- leave field empty for using mobile device default locale-->
+    <string name="locale_country_code">CA</string>
+
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">cancel</string>
+
+    <string name="title_validation_failed">Data Validation Error</string>
+    <string name="empty"></string>
+
+    <string name="ws_error_no_connection">Data Connection not available.\nPlease check your Wi-Fi/Network settings and try again.</string>
+    <string name="ws_error_timeout">Timed out while connecting to the server.</string>
+    <string name="ws_error_connection_error">An error occurred connecting to the server.</string>
+    <string name="ws_error_response_unknown">An unknown error occurred while communicating.</string>
+    <string name="ws_error_response_invalid">Invalid response from the server.</string>
+    <string name="ws_error_session_expired">This session has expired. You need login again.</string>
+    <string name="ws_error_no_connection_forgotPIN">Data Connection not available.\nYou cannot reset your PIN.</string>
+    <string name="ws_error_no_connection_forgotPassword">Data Connection not available.\nYou cannot reset your password.</string>
+    <string name="ws_error_server_response_error">Server response error.</string>
+    <string name="ws_error_client_not_authorized">A new update is available for this app.  Tap Here to install the update.</string>
+    <string name="button_next">next</string>
+    <string name="button_next_accept">accept</string>
+    <string name="button_previous">back</string>
+    <string name="button_take_photo">take photo</string>
+    <string name="photo_take">Take Photo</string>
+    <string name="photo_choose">Choose Photo</string>
+    <string name="photo_cancel">Cancel</string>
+    <string name="photo_title">PhotoClaims</string>
+    <string name="button_done_submit">submit claim</string>
+    <string name="text_submitting_claim">Submitting claim</string>
+    <string name="button_delete">delete</string>
+    <string name="button_done">submit another claim</string>
+    <string name="button_submit">confirm</string>
+    <string name="button_retry">try again</string>
+    <string name="button_menu">menu</string>
+    <string name="button_logout">logout</string>
+
+
+    <!-- confirmation -->
+    <string name="confirmation_title">Confirmation</string>
+    <string name="confirmation_content_claim_type">Claim Type</string>
+    <string name="confirmation_content_photos_quantity">Photos</string>
+    <string name="confirmation_content_pay_balance">Pay balance from HSSA</string>
+    <string name="confirmation_value_claim_type">Health</string>
+    <string name="confirmation_value_photos_quantity">1</string>
+    <string name="confirmation_value_pay_balance">Yes</string>
+
+    <string name="text_confirmation_before_confirm">Please review the above information carefully. If you are in agreement, press \'confirm\'.</string>
+
+    <string name="success_information">Thank you!\n\nWe have received your claim.\n\nOnce it has been processed, you will be able to view the result in eProfile.</string>
+    <string name="failure_information">Sorry, we did not receive your claim. It could be a connection issue.\n\nWhat would you like to do?</string>
+
+    <string name="take_photo_information">You can\'t take photos since the background light is low.</string>
+    <string name="title_activity_photo">PhotoActivity</string>
+    <string name="title_activity_tbmy_car">TBMyCarActivity</string>
+    <string name="title_activity_tbmy_car_list">TBMyCarListActivity</string>
+    <string name="title_activity_tbmy_car_add_car">TBMyCarAddCarActivity</string>
+    <string name="title_activity_tbmy_car_sticker_renewal">TBMyCarStickerRenewalActivity</string>
+    <string name="title_activity_tbmy_ticket_list">TBMyTicketListActivity</string>
+    <string name="title_activity_tbmy_ticket_add_ticket">TBMyTicketAddTicketActivity</string>
+    <string name="title_activity_tbmy_ticket_select_payment">TBMyTicketSelectPaymentActivity
+    </string>
+    <string name="title_activity_tbmy_ticket_chat">TBMyTicketChatActivity</string>
+
+
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="auroratech.traber" >
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/Theme.AppCompat.Light" >
+
+        <!-- android:name=".TBLoginActivity" -->
+        <activity
+            android:name=".TBLoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TBSignUpActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_sign_up"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TBForgotPasswordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_forgot_password"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TBMyProfileActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="Profile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".TBMyTicketActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_ticket"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TBPhotoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_photo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TBMyCarListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_tbmy_car_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TBMyCarAddCarActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_tbmy_car_add_car"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".TBMyCarStickerRenewalActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_tbmy_car_sticker_renewal"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".TBMyTicketListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_tbmy_ticket_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TBMyTicketAddTicketActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_tbmy_ticket_add_ticket"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".TBMyTicketSelectPaymentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_tbmy_ticket_select_payment"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TBMyTicketChatActivity"
+            android:label="@string/title_activity_tbmy_ticket_chat"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

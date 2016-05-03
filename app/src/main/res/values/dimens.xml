@@ -1,0 +1,40 @@
+<resources>
+
+    <!--tb footer size-->
+    <dimen name="tb_footer_button_size">64dp</dimen>
+
+    <dimen name="activity_horizontal_margin_small">8dp</dimen>
+    <dimen name="activity_vertical_margin_small">8dp</dimen>
+
+
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+<!--    <dimen name="activity_horizontal_margin">5dp</dimen>
+    <dimen name="activity_vertical_margin">5dp</dimen>-->
+    <dimen name="label_text_size">22sp</dimen>
+    <dimen name="content_text_size">16sp</dimen>
+    <dimen name="button_text_size">14sp</dimen>
+    <dimen name="font_size_normal">16sp</dimen>
+    <dimen name="font_size_normal_header">18sp</dimen>
+    <dimen name="font_size_big">22sp</dimen>
+    <dimen name="font_size_huge">32sp</dimen>
+    <dimen name="font_size_small">14sp</dimen>
+    <dimen name="font_size_tiny">12sp</dimen>
+    <dimen name="photo_width">110dp</dimen>
+    <dimen name="photo_height">110dp</dimen>
+    <dimen name="home_declaimer_size">5dp</dimen>
+    <dimen name="home_declaimer_left_size">10dp</dimen>
+    <dimen name="home_declaimer_top_bottom_size">10dp</dimen>
+    <dimen name="button_height_size">25sp</dimen>
+    <dimen name="button_height_size_fr">45sp</dimen>
+
+    <dimen name="font_size_hssa_fr">9sp</dimen>
+
+    <dimen name="photo_view_commands_dimens">80dp</dimen>
+    <dimen name="photo_view_image_top_dimens">5dp</dimen>
+</resources>

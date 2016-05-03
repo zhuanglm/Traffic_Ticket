@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clipChildren="false"
+        >
+
+            <!--Ticket Info-->
+            <RelativeLayout
+                android:id="@+id/ticket_info_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/border_with_transparency"
+                >
+                <RelativeLayout
+                    android:id="@+id/ticket_info_inside_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:minHeight="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/my_ticket_chat_arrow_button">
+                            <!--first row-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ticket No: "
+                                        android:textSize="20sp" />
+                                    <TextView
+                                        android:id="@+id/ticket_number_output"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="BSWS112830809"
+                                        android:textSize="20sp" />
+
+                            </LinearLayout>
+                            <!--second row-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="italic"
+                                        android:text="Status: "
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/ticket_status_output"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="italic"
+                                        android:text="Paid"
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="italic"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="Date Submitted: "
+                                        android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/ticket_submitted_output"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textStyle="italic"
+                                        android:text="June1,2020"
+                                        android:textSize="14sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/my_ticket_chat_arrow_button"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/point_right_arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            />
+
+                    </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/ticket_info_inside_content"
+                    >
+                        <ImageView
+                            android:id="@+id/ticket_info_expand_btn"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/expand_icon"
+                            />
+
+                        <ImageView
+                            android:id="@+id/ticket_info_contract_btn"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/collapse_icon"
+                            />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            <!--Slide out content-->
+            <RelativeLayout
+                android:id="@+id/ticket_info_detail_content"
+                android:layout_below="@+id/ticket_info_content"
+                android:layout_alignLeft="@+id/ticket_info_content"
+                android:layout_alignRight="@+id/ticket_info_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/border_with_transparency"
+                >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_alignParentTop="true"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            >
+                                <ImageView
+                                    android:id="@+id/my_ticket_status"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="140dp" />
+
+                            </LinearLayout>
+
+                        <Button
+                            android:id="@+id/my_ticket_edit"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="60dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="Pay"
+                            android:background="@drawable/ticket_item_pay_background"
+                            />
+
+                    </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--independent image button (for adding new ticket) -->
+            <RelativeLayout
+                android:id="@+id/item_ticketAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    >
+                        <ImageView
+                            android:id="@+id/item_ticketAddImage"
+                            android:src="@drawable/add_icon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add a new ticket"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+            </RelativeLayout>
+
+
+    </RelativeLayout>
+</merge>

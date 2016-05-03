@@ -1,0 +1,175 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="auroratech.traber.TBMyTicketSelectPaymentActivity"
+    android:background="@drawable/background_hollow"
+    >
+
+    <auroratech.traber.common.ui.TBHeader
+        android:id="@+id/profileHeaderSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:disableBackButton="false"
+        custom:pageTitle="Select Package"
+        android:layout_alignParentTop="true">
+    </auroratech.traber.common.ui.TBHeader>
+
+    <!-- select payment option -->
+    <RelativeLayout
+        android:id="@+id/myTicketSelectPackageContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_above="@+id/profileFooterSection"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+                <!--payment option 1-->
+                <LinearLayout
+                    android:id="@+id/option_one_content"
+                    style="@style/TBPaymentPageItemLayout"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_below="@+id/payment_package_title"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        style="@style/TBPaymentPageTextHeader"
+                        android:text="$99"
+                        />
+                    <RelativeLayout
+                        android:id="@+id/option_one_content_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/option_one_content_description_title"
+                            style="@style/TBPaymentPageTextContentHeader"
+                            android:text="Do it YourSelf!"
+                            />
+                        <TextView
+                            android:id="@+id/option_one_content_description_content"
+                            style="@style/TBPaymentPageTextContentDescription"
+                            android:text="Legal consultation for any offense against the Highway Safety Code."
+                            android:layout_below="@+id/option_one_content_description_title"
+                            />
+                        <LinearLayout
+                            android:id="@+id/option_one_privacy_policy_section"
+                            style="@style/TBPaymentPageTextContentPrivacyAgreement"
+                            android:layout_below="@+id/option_one_content_description_content"
+                            >
+                            <CheckBox
+                                android:id="@+id/option_one_privacy_policy_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10dp"
+                                android:text="I have read the "
+                                />
+                            <TextView
+                                android:id="@+id/option_one_privacy_policy_link"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10dp"
+                                android:text="Privacy policy"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:background="@drawable/tb_payment_option_submit_background">
+                        <Button
+                            android:id="@+id/option_one_buy_now_button"
+                            style="@style/TBPaymentPageTextContentButton"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--payment option 2-->
+                <LinearLayout
+                    android:id="@+id/option_two_content"
+                    style="@style/TBPaymentPageItemLayout"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_below="@+id/option_one_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        style="@style/TBPaymentPageTextHeader"
+                        android:text="$179"
+                        />
+                    <RelativeLayout
+                        android:id="@+id/option_two_content_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/option_two_content_description_title"
+                            style="@style/TBPaymentPageTextContentHeader"
+                            android:text="0 to 3 Demerit Points"
+                            />
+                        <TextView
+                            android:id="@+id/option_two_content_description_content"
+                            style="@style/TBPaymentPageTextContentDescription"
+                            android:text="Processing of a ticket with up to 3 demerit points."
+                            android:layout_below="@+id/option_two_content_description_title"/>
+                        <LinearLayout
+                            android:id="@+id/option_two_privacy_policy_section"
+                            style="@style/TBPaymentPageTextContentPrivacyAgreement"
+                            android:layout_below="@+id/option_two_content_description_content"
+                            >
+                            <CheckBox
+                                android:id="@+id/option_two_privacy_policy_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10dp"
+                                android:text="I have read the "
+                                />
+                            <TextView
+                                android:id="@+id/option_two_privacy_policy_link"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10dp"
+                                android:text="Privacy policy"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:background="@drawable/tb_payment_option_submit_background">
+                        <Button
+                            android:id="@+id/option_two_buy_now_button"
+                            style="@style/TBPaymentPageTextContentButton"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <auroratech.traber.common.ui.TBFooter
+        android:id="@+id/profileFooterSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:disableClickableOption="first"
+        android:layout_alignParentBottom="true">
+    </auroratech.traber.common.ui.TBFooter>
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    tools:context=".TBPhotoActivity" >
+
+
+    <auroratech.traber.common.ui.TBHeader
+        android:id="@+id/profileHeaderSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:disableBackButton="false"
+        custom:pageTitle="My Profile"
+        android:layout_alignParentTop="true">
+    </auroratech.traber.common.ui.TBHeader>
+
+    <RelativeLayout
+        android:id="@+id/myTicketViewItemsContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_alignParentBottom="true"
+        >
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profileHeaderSection"
+        android:layout_alignParentBottom="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <!-- Capture picture button -->
+            <Button
+                android:id="@+id/btnCapturePicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take a Picture"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Preview"
+                android:padding="10dp"
+                android:textSize="15dp"/>
+
+            <!-- To display picture taken -->
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!-- To preview video recorded -->
+            <VideoView
+                android:id="@+id/videoPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
