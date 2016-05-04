@@ -28,6 +28,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             >
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -122,7 +124,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/city_selection_content"
-                    android:background="@drawable/ticket_comment_section_background">
+                    android:background="@drawable/ticket_comment_section_background"
+                    >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

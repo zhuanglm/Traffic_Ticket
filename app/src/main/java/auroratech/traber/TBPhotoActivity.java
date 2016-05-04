@@ -36,11 +36,16 @@ public class TBPhotoActivity extends TBActivityBase {
     public static final String CONST_FROM_ADD_TICKET = "FROM_ADD_TICKET";
     public static final String CONST_FROM_ADD_CAR = "FROM_ADD_CAR";
     public static final String CONST_FROM_ADD_DRIVER_LICENSE = "FROM_ADD_DRIVER_LICENSE";
+    // as requested by client
+    public static final String CONST_FROM_TICKET_LIST = "FROM_TICKET_LIST";
+    public static final String CONST_FROM_CAR_LIST = "FROM_CAR_LIST";
 
 
     private boolean isFromAddTicket = false;
     private boolean isFromAddCar = false;
     private boolean isFromAddDriverLicense = false;
+    private boolean isFromTicketList = false;
+    private boolean isFromCarList = false;
 
 
     TBActivityBase current;
@@ -87,53 +92,53 @@ public class TBPhotoActivity extends TBActivityBase {
         //btnRecordVideo = (Button) findViewById(R.id.btnRecordVideo);
 
 
-        profileHeaderSection.setActivityReference(this);
+//        profileHeaderSection.setActivityReference(this);
+//
+//        /**
+//         * Capture image button click event
+//         */
+//        btnCapturePicture.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//
+//            // hide this button
+//            btnCapturePicture.setVisibility(View.GONE);
+//
+//            // capture picture
+//            captureImage();
+//            }
+//        });
 
-        /**
-         * Capture image button click event
-         */
-        btnCapturePicture.setOnClickListener(new View.OnClickListener() {
+//        btnReCapturePictureBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                reTakeToolBar.setVisibility(View.GONE);
+//
+//                // capture picture
+//                captureImage();
+//
+//            }
+//        });
 
-            @Override
-            public void onClick(View v) {
-
-            // hide this button
-            btnCapturePicture.setVisibility(View.GONE);
-
-            // capture picture
-            captureImage();
-            }
-        });
-
-        btnReCapturePictureBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                reTakeToolBar.setVisibility(View.GONE);
-
-                // capture picture
-                captureImage();
-
-            }
-        });
-
-        btnCapturePictureOkBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TBTransitionObjectManager.getInstance().acceptableFile = fileUri;
-
-                if (isFromAddTicket) {
-                    TBUIManager.getInstance().ToMyTicketAddTicket(current);
-
-                } else if (isFromAddCar) {
-                    TBUIManager.getInstance().ToMyCarAddCar(current);
-
-                } else if (isFromAddDriverLicense) {
-
-                    TBUIManager.getInstance().ToMyProfileAddLicensePage(current);
-                }
-
-            }
-        });
+//        btnCapturePictureOkBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                TBTransitionObjectManager.getInstance().acceptableFile = fileUri;
+//
+//                if (isFromAddTicket) {
+//                    TBUIManager.getInstance().ToMyTicketAddTicket(current);
+//
+//                } else if (isFromAddCar) {
+//                    TBUIManager.getInstance().ToMyCarAddCar(current);
+//
+//                } else if (isFromAddDriverLicense) {
+//
+//                    TBUIManager.getInstance().ToMyProfileAddLicensePage(current);
+//                }
+//
+//            }
+//        });
 
         /**
          * Record video button click event
@@ -160,6 +165,8 @@ public class TBPhotoActivity extends TBActivityBase {
         Intent intent = getIntent();
         String fromActivity = intent.getStringExtra(TAG_FROM_ACTIVITY);
 
+        // leave states here, just in case
+
         switch (fromActivity) {
             case CONST_FROM_ADD_TICKET: {
                 isFromAddTicket = true;
@@ -173,6 +180,14 @@ public class TBPhotoActivity extends TBActivityBase {
                 isFromAddDriverLicense = true;
                 break;
             }
+            case CONST_FROM_TICKET_LIST: {
+                isFromTicketList = true;
+                break;
+            }
+            case CONST_FROM_CAR_LIST: {
+                isFromCarList = true;
+                break;
+            }
             default: {
                 Toast.makeText(getApplicationContext(),
                         "Incorrectly started photo activity...",
@@ -181,8 +196,9 @@ public class TBPhotoActivity extends TBActivityBase {
                 finish();
             }
         }
-        captureImage();
 
+        // go straight to taking image
+        captureImage();
     }
 
     /**
@@ -268,9 +284,39 @@ public class TBPhotoActivity extends TBActivityBase {
                 // post process this part
                 postImageCaptureOperation();
 
-                // successfully captured the image
-                // display it in image view
-                previewCapturedImage();
+                // store image into intermediate
+                TBTransitionObjectManager.getInstance().acceptableFile = fileUri;
+
+                if(isFromTicketList) {
+
+                    TBUIManager.getInstance().ToMyTicketAddTicket(current);
+                }
+                else if (isFromCarList) {
+
+                    TBUIManager.getInstance().ToMyCarAddCar(current);
+
+                }
+                else if (isFromAddTicket) {
+
+                    TBUIManager.getInstance().ToMyTicketAddTicket(current);
+
+                }
+                else if (isFromAddCar) {
+
+                    TBUIManager.getInstance().ToMyCarAddCar(current);
+
+                }
+                else if (isFromAddDriverLicense) {
+
+                    TBUIManager.getInstance().ToMyProfileAddLicensePage(current);
+
+                }
+
+//                else {
+//                    // successfully captured the image
+//                    // display it in image view
+//                    previewCapturedImage();
+//                }
 
             } else if (resultCode == RESULT_CANCELED) {
                 // user cancelled Image capture
@@ -278,15 +324,44 @@ public class TBPhotoActivity extends TBActivityBase {
 //                        "User cancelled image capture", Toast.LENGTH_SHORT)
 //                        .show();
 
-                btnCapturePicture.setVisibility(View.VISIBLE);
+                if(isFromTicketList) {
+                    TBUIManager.getInstance().ToMyTicketList(current);
+                }
+                else if (isFromCarList) {
+                    TBUIManager.getInstance().ToMyCarList(current);
+
+                }
+                else if (isFromAddTicket) {
+
+                    TBUIManager.getInstance().ToMyTicketAddTicket(current);
+
+                }
+                else if (isFromAddCar) {
+
+                    TBUIManager.getInstance().ToMyCarAddCar(current);
+
+                }
+                else if (isFromAddDriverLicense) {
+
+                    TBUIManager.getInstance().ToMyProfileAddLicensePage(current);
+
+                }
+
+//                else {
+//                    btnCapturePicture.setVisibility(View.VISIBLE);
+//                }
 
             } else {
                 // failed to capture image
                 Toast.makeText(getApplicationContext(),
                         "Sorry! Failed to capture image", Toast.LENGTH_SHORT)
                         .show();
+
+                // just default to my ticket list page
+                TBUIManager.getInstance().ToMyTicketList(current);
+
             }
-        } else if (requestCode == CAMERA_CAPTURE_VIDEO_REQUEST_CODE) {
+        }/* else if (requestCode == CAMERA_CAPTURE_VIDEO_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
                 // video successfully recorded
                 // preview the recorded video
@@ -302,7 +377,7 @@ public class TBPhotoActivity extends TBActivityBase {
                         "Sorry! Failed to record video", Toast.LENGTH_SHORT)
                         .show();
             }
-        }
+        }*/
     }
 
     private void postImageCaptureOperation() {
@@ -406,13 +481,19 @@ public class TBPhotoActivity extends TBActivityBase {
     public void BackPressed() {
         // for back press from header
         if (isFromAddTicket) {
-            TBUIManager.getInstance().ToMyTicketAddTicket(current);
+            //TBUIManager.getInstance().ToMyTicketAddTicket(current);
 
         } else if (isFromAddCar) {
-            TBUIManager.getInstance().ToMyCarAddCar(current);
+            //TBUIManager.getInstance().ToMyCarAddCar(current);
 
         } else if (isFromAddDriverLicense) {
-            TBUIManager.getInstance().ToMyProfileAddLicensePage(current);
+            //TBUIManager.getInstance().ToMyProfileAddLicensePage(current);
+
+        } else if (isFromTicketList) {
+            // can't press back here
+
+        } else if (isFromCarList) {
+            // can't press back here
 
         }
     }

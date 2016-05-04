@@ -27,7 +27,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/my_car_add_btn"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             >
 
             <!--Add new car item-->
@@ -138,7 +139,7 @@
                                 android:background="@drawable/edit_text_transparency"
                                 android:layout_column="1"
                                 android:layout_weight="1"
-                                android:layout_marginLeft="5dp" />
+                                />
                         </TableRow>
                         <TableRow
                             style="@style/TBMyStickerAddTableRow"

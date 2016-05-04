@@ -93,7 +93,7 @@ public class TBMyCarListActivity extends TBActivityBase implements IItemPressed,
 
     @Override
     public void addButtonPressed() {
-        TBUIManager.getInstance().ToMyCarAddCar(current);
+        TBUIManager.getInstance().ToPhotoActivity(current, TBPhotoActivity.CONST_FROM_CAR_LIST);
     }
 
     @Override

@@ -124,7 +124,6 @@ public class TBUIManager {
 
     private void transition(Activity srcActivity, Class destActivity) {
         Intent intent = new Intent(srcActivity, destActivity);
-        srcActivity.overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         srcActivity.startActivity(intent);
         srcActivity.finish();
     }
@@ -134,7 +133,6 @@ public class TBUIManager {
     }
 
     public void transitionWithCustomIntent (Activity srcActivity, Intent intent){
-        srcActivity.overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         srcActivity.startActivity(intent);
         srcActivity.finish();
     }

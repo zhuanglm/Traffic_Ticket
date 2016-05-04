@@ -85,13 +85,6 @@ public class TBMyTicketAddTicketActivity extends TBActivityBase {
         // load initial state of the page
         loadInitialState();
 
-        //for mockup
-       Uri fileUri = TBTransitionObjectManager.getInstance().acceptableFile;
-
-        if(fileUri == null) {
-            TBUIManager.getInstance().ToPhotoActivity(current, TBPhotoActivity.CONST_FROM_ADD_TICKET);
-        }
-
         loadTakenImage();
     }
 

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import auroratech.traber.R;
 import auroratech.traber.common.ui.IHeaderBackPressed;
 import auroratech.traber.common.ui.IItemPressed;
 import auroratech.traber.common.ui.TBUIBindingObj;
@@ -34,6 +35,9 @@ public class TBActivityBase extends Activity implements IItemPressed, IHeaderBac
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
         // remove top title
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,

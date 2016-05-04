@@ -110,7 +110,7 @@ public class TBMyTicketListActivity extends TBActivityBase {
 
     @Override
     public void addButtonPressed() {
-        TBUIManager.getInstance().ToMyTicketAddTicket(current);
+        TBUIManager.getInstance().ToPhotoActivity(current, TBPhotoActivity.CONST_FROM_TICKET_LIST);
     }
 
     @Override
