@@ -181,6 +181,7 @@ public class TBPhotoActivity extends TBActivityBase {
                 finish();
             }
         }
+        captureImage();
 
     }
 

@@ -19,6 +19,24 @@
                 android:paddingBottom="5dp"
                 android:background="@drawable/border_with_transparency"
                 >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CAR 1"
+                    android:id="@+id/textView"
+                    android:textSize="20sp"
+                    android:textColor="#FF000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:text="New Text"
+                    android:id="@+id/textView2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="25dp"
+                    android:background="#FF6C6C6C" />
+
                 <RelativeLayout
                     android:id="@+id/car_info_inside_content"
                     android:layout_width="match_parent"
@@ -43,24 +61,30 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/car_item_model"
-                                    android:textStyle="bold|italic"/>
+                                    android:textStyle="bold|italic"
+                                    android:textSize="20sp" />
                                 <TextView
                                     android:id="@+id/item_carModel"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    />
+                                    android:text="BMW"
+                                    android:layout_marginLeft="5dp"
+                                    android:textSize="18sp" />
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/car_item_year"
                                     android:textStyle="bold|italic"
-                                    android:layout_marginLeft="50dp"/>
+                                    android:layout_marginLeft="30dp"
+                                    android:textSize="20sp" />
                                 <TextView
                                     android:id="@+id/item_carYear"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textStyle="bold|italic"
-                                    />
+                                    android:text="2013"
+                                    android:layout_marginLeft="5dp"
+                                    android:textSize="18sp" />
                             </LinearLayout>
                             <!--second row-->
                             <LinearLayout
@@ -68,27 +92,33 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 >
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    />
+
                                 <TextView
                                     android:id="@+id/item_carExpiry"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/car_item_sticker_expire"/>
+                                    android:text="@string/car_item_sticker_expire"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="09/2017"
+                                    android:layout_marginLeft="10dp"
+                                    android:textColor="@color/sign_up_button_color"
+                                    android:textSize="18sp" />
                             </LinearLayout>
                         </LinearLayout>
 
                         <!--circle image-->
                         <ImageView
                             android:id="@+id/item_carIcon"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="96dp"
+                            android:layout_height="96dp"
                             android:layout_centerVertical="true"
                             android:layout_alignParentLeft="true"
                             android:src="@drawable/car"
-                            />
+                            android:layout_marginTop="15dp" />
 
                         <TextView
                             android:id="@+id/item_renew_sticker"
@@ -103,31 +133,33 @@
                             android:textColor="@color/blue"
                             android:background="@drawable/selector_edittext_white"
                             />
-                    </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/car_info_inside_content"
-                    >
-                        <ImageView
-                            android:id="@+id/car_info_expand_btn"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/expand_icon"
-                            />
-                        <ImageView
-                            android:id="@+id/car_info_contract_btn"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/collapse_icon"
-                            />
-                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+
+                        android:layout_marginTop="100dp">
+                            <ImageView
+                                android:id="@+id/car_info_expand_btn"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/expand_icon"
+                                />
+                            <ImageView
+                                android:id="@+id/car_info_contract_btn"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/collapse_icon"
+                                />
+                        </RelativeLayout>
                 </RelativeLayout>
 
+            </RelativeLayout>
+
             <!--Slide out content-->
-            <RelativeLayout
+
+        <RelativeLayout
                 android:id="@+id/car_info_detail_content"
                 android:layout_below="@+id/car_info_content"
                 android:layout_alignLeft="@+id/car_info_content"
@@ -166,12 +198,15 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Plate No: "/>
+                                        android:text="Plate No: "
+                                        android:textSize="16sp" />
                                     <TextView
                                         android:id="@+id/my_car_plate_number"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:singleLine="true"/>
+                                        android:singleLine="true"
+                                        android:text="BSSL 234"
+                                        android:layout_marginLeft="10dp" />
                                     </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="wrap_content"
@@ -181,12 +216,15 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Insurance No: "/>
+                                        android:text="Insurance No: "
+                                        android:textSize="16sp" />
                                     <TextView
                                         android:id="@+id/my_car_insurance_number"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:singleLine="true"/>
+                                        android:singleLine="true"
+                                        android:text="8373648"
+                                        android:layout_marginLeft="10dp" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="wrap_content"
@@ -196,12 +234,15 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Insurance Company: "/>
+                                        android:text="Insurance Company: "
+                                        android:textSize="16sp" />
                                     <TextView
                                         android:id="@+id/my_car_insurance_company"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:singleLine="true"/>
+                                        android:singleLine="true"
+                                        android:text="TD CANADA TRUST"
+                                        android:layout_marginLeft="10dp" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="wrap_content"
@@ -211,26 +252,29 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Insurance Expire: "/>
+                                        android:text="Insurance Expire: "
+                                        android:textSize="16sp" />
                                     <TextView
                                         android:id="@+id/my_car_insurance_expiry_date"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:singleLine="true"/>
+                                        android:singleLine="true"
+                                        android:text="07/08/2018"
+                                        android:layout_marginLeft="10dp" />
                                 </LinearLayout>
 
                             </LinearLayout>
 
                         <Button
                             android:id="@+id/my_car_edit"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginRight="30dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="50dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/ticket_item_pay_background"
-                            android:textColor="@color/white"
+                            android:textColor="@color/sign_up_button_color"
                             android:textStyle="bold"
                             android:text="Edit"/>
 
@@ -254,7 +298,7 @@
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_centerInParent="true"
-                    >
+                    android:id="@+id/linearLayout">
                         <ImageView
                             android:id="@+id/item_carAddImage"
                             android:src="@drawable/add_icon"

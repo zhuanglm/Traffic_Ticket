@@ -62,6 +62,7 @@
             android:paddingRight="20dp"
             android:background="@drawable/ticket_comment_section_submit_button_background"
             android:textColor="@color/white"
+            android:visibility="gone"
             />
 
         <LinearLayout

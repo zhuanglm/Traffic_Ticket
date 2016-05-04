@@ -95,8 +95,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:minWidth="200dp"
-                        android:background="@drawable/edit_text_white_background"
-                        />
+                        android:background="@drawable/edit_text_transparency"
+                        android:layout_marginLeft="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -135,10 +135,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:singleLine="true"
-                                android:background="@drawable/edit_text_white_background"
+                                android:background="@drawable/edit_text_transparency"
                                 android:layout_column="1"
                                 android:layout_weight="1"
-                                />
+                                android:layout_marginLeft="5dp" />
                         </TableRow>
                         <TableRow
                             style="@style/TBMyStickerAddTableRow"
@@ -154,7 +154,7 @@
                                 android:id="@+id/insurance_number"
                                 android:layout_height="wrap_content"
                                 android:singleLine="true"
-                                android:background="@drawable/edit_text_white_background"
+                                android:background="@drawable/edit_text_transparency"
                                 android:layout_column="1"
                                 android:layout_weight="1"
                                 />
@@ -172,7 +172,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:singleLine="true"
-                                android:background="@drawable/edit_text_white_background"
+                                android:background="@drawable/edit_text_transparency"
                                 android:enabled="false"
                                 android:layout_column="1"
                                 android:layout_weight="1"
@@ -183,7 +183,7 @@
                                 android:layout_height="20dp"
                                 android:layout_column="1"
                                 android:background="@drawable/calendar"
-                                />
+                                android:layout_marginLeft="2dp" />
 
                             </TableRow>
 
@@ -238,7 +238,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:singleLine="true"
-                                android:background="@drawable/edit_text_white_background"
+                                android:background="@drawable/edit_text_transparency"
                                 android:layout_column="1"
                                 android:layout_weight="1"
                                 />
@@ -248,7 +248,7 @@
                                 android:layout_height="20dp"
                                 android:layout_column="2"
                                 android:background="@drawable/calendar"
-                                />
+                                android:layout_marginLeft="2dp" />
                         </TableRow>
                         <TableRow
                             style="@style/TBMyStickerAddTableRow"
@@ -265,7 +265,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:singleLine="true"
-                                android:background="@drawable/edit_text_white_background"
+                                android:background="@drawable/edit_text_transparency"
                                 android:layout_column="1"
                                 android:layout_weight="1"
                                 />
@@ -286,7 +286,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:singleLine="true"
-                                android:background="@drawable/edit_text_white_background"
+                                android:background="@drawable/edit_text_transparency"
                                 android:layout_column="1"
                                 android:layout_weight="1"
                                 />

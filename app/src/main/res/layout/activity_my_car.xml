@@ -100,7 +100,7 @@
                                 android:layout_height="wrap_content"
                                 android:singleLine="true"
                                 android:minWidth="200dp"
-                                android:background="@drawable/edit_text_white_background"
+                                android:background="@drawable/edit_text_transparency"
                                 />
                         </LinearLayout>
 
@@ -130,7 +130,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:singleLine="true"
-                                    android:background="@drawable/edit_text_white_background"
+                                    android:background="@drawable/edit_text_transparency"
                                     android:minWidth="50dp" />
 
 
@@ -148,7 +148,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:singleLine="true"
-                                    android:background="@drawable/edit_text_white_background"
+                                    android:background="@drawable/edit_text_transparency"
                                     android:minWidth="50dp" />
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -159,7 +159,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:singleLine="true"
-                                    android:background="@drawable/edit_text_white_background"
+                                    android:background="@drawable/edit_text_transparency"
                                     android:minWidth="50dp"
                                     android:enabled="false"/>
                                 <ImageButton
@@ -197,7 +197,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:singleLine="true"
-                                    android:background="@drawable/edit_text_white_background"
+                                    android:background="@drawable/edit_text_transparency"
                                     android:minWidth="50dp"
                                     />
                                 <ImageButton
@@ -225,7 +225,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:singleLine="true"
-                                    android:background="@drawable/edit_text_white_background"
+                                    android:background="@drawable/edit_text_transparency"
                                     android:minWidth="50dp"  />
                             </LinearLayout>
 

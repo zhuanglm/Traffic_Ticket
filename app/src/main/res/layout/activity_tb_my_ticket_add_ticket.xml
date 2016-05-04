@@ -110,7 +110,7 @@
                         android:textSize="20dp"
                         android:textStyle="bold"
                         android:layout_marginLeft="10dp"
-                        android:text="City:"/>
+                        android:text="City: Toronto"/>
                     <Spinner
                         android:id="@+id/my_ticket_city_dropdown"
                         android:layout_width="fill_parent"
